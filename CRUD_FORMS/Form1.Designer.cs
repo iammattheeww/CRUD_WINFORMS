@@ -11,7 +11,8 @@
         ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        /* 
+         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
@@ -19,6 +20,8 @@
             }
             base.Dispose(disposing);
         }
+         */
+
 
         #region Windows Form Designer generated code
 
@@ -43,7 +46,7 @@
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            //SuspendLayout();
             // 
             // dataGridView1
             // 
@@ -62,7 +65,7 @@
             label1.Size = new Size(24, 20);
             label1.TabIndex = 1;
             label1.Text = "ID";
-            label1.Click += label1_Click;
+            // label1.Click += label1_Click;
             // 
             // button1
             // 
@@ -108,7 +111,7 @@
             button5.TabIndex = 6;
             button5.Text = "button5";
             button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            // button5.Click += button5_Click;
             // 
             // textBox1
             // 
@@ -167,7 +170,8 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            /* 
+             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(912, 558);
             Controls.Add(textBox4);
@@ -189,6 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
+             */
         }
 
         #endregion
