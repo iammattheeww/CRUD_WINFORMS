@@ -10,8 +10,10 @@ namespace CRUD_FORMS
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        private readonly string _connStr;
+        public Form2(string connStr)
         {
+            _connStr = connStr; 
             InitializeComponent();
         }
     }
