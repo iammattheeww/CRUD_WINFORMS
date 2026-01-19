@@ -28,7 +28,7 @@ namespace CRUD_FORMS
             using var conn = new MySqlConnection(connStr);
             conn.Open();
 
-            var da = new MySqlDataAdapter("SELECT Id, FirstName, LastName, Email FROM Student", conn);
+            var da = new MySqlDataAdapter("SELECT Id, FirstName, LastName, Email FROM student", conn);
 
             var dt = new DataTable();
             da.Fill(dt);
@@ -42,7 +42,7 @@ namespace CRUD_FORMS
             using var conn = new MySqlConnection(connStr);
             conn.Open();
 
-            string sql = @"INSERT INTO Student (FirstName, LastName, Email) VALUES (@fn, @ln, @em)";
+            string sql = @"INSERT INTO student (FirstName, LastName, Email) VALUES (@fn, @ln, @em)";
 
             using var cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@fn", txtFirstName.Text);
@@ -60,7 +60,7 @@ namespace CRUD_FORMS
             using var conn = new MySqlConnection(connStr);
             conn.Open();
 
-            string sql = @"UPDATE Studen SET FirstName=@fn, LastName=@ln, Email=@em WHERE Id=@id";
+            string sql = @"UPDATE student SET FirstName=@fn, LastName=@ln, Email=@em WHERE Id=@id";
 
             using var cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@id", txtId.Text);
