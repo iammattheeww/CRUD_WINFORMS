@@ -8,7 +8,7 @@ namespace CRUD_FORMS
 {
     public partial class Form1 : Form
     {
-        private readonly string connStr="Server=localhost;Database=school_db;User=root;Password=;";
+        private readonly string connStr = "Server=localhost;Database=school_db;User=root;Password=;";
 
         public Form1()
         {
@@ -37,7 +37,26 @@ namespace CRUD_FORMS
             dgvStudents.DataSource = dt;
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        // Add
+        //private void btnAdd_Click(object sender, EventArgs e)
+        //{
+        //    using var conn = new MySqlConnection(connStr);
+        //    conn.Open();
+
+        //    string sql = @"INSERT INTO student (FirstName, LastName, Email) VALUES (@fn, @ln, @em)";
+
+        //    using var cmd = new MySqlCommand(sql, conn);
+        //    cmd.Parameters.AddWithValue("@fn", txtFirstName.Text);
+        //    cmd.Parameters.AddWithValue("@ln", txtLastName.Text);
+        //    cmd.Parameters.AddWithValue("@em", txtEmail.Text);
+
+        //    cmd.ExecuteNonQuery();
+
+        //    LoadStudents();   // ✅ correct
+        //    ClearFields();
+        //}
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             using var conn = new MySqlConnection(connStr);
             conn.Open();
@@ -71,13 +90,13 @@ namespace CRUD_FORMS
             cmd.ExecuteNonQuery();
 
             LoadStudents();
-            //ClearFields();
+            ClearFields();
         }
 
-        //private void btnClear_Click(object sender, EventArgs e)
-        //{
-        //    ClearFields();
-        //}
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
 
         private void ClearFields()
         {

@@ -31,11 +31,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            btnAdd = new Button();
+            btnUpdate = new Button();
+            btnClear = new Button();
+            btnDelete = new Button();
+            btnManage = new Button();
             dgvStudents = new DataGridView();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -48,55 +48,51 @@
             ((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnAdd
             // 
-            button1.Location = new Point(87, 275);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "New";
-            button1.UseVisualStyleBackColor = true;
-            // button1.Click += this.button1_Click;
+            btnAdd.Location = new Point(87, 275);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(94, 29);
+            btnAdd.TabIndex = 0;
+            btnAdd.Text = "New";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click_1;
             // 
-            // button2
+            // btnUpdate
             // 
-            button2.Location = new Point(187, 275);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 1;
-            button2.Text = "Update";
-            button2.UseVisualStyleBackColor = true;
-            // button2.Click += this.button2_Click;
+            btnUpdate.Location = new Point(187, 275);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(94, 29);
+            btnUpdate.TabIndex = 1;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnClear
             // 
-            button3.Location = new Point(287, 275);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 2;
-            button3.Text = "Clear";
-            button3.UseVisualStyleBackColor = true;
-            // button3.Click += this.button3_Click;
+            btnClear.Location = new Point(287, 275);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(94, 29);
+            btnClear.TabIndex = 2;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnDelete
             // 
-            button4.Location = new Point(387, 275);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 29);
-            button4.TabIndex = 3;
-            button4.Text = "Delete";
-            button4.UseVisualStyleBackColor = true;
-            // button4.Click += this.button4_Click;
+            btnDelete.Location = new Point(387, 275);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 29);
+            btnDelete.TabIndex = 3;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnManage
             // 
-            button5.Location = new Point(487, 275);
-            button5.Name = "button5";
-            button5.Size = new Size(94, 29);
-            button5.TabIndex = 4;
-            button5.Text = "Manage";
-            button5.UseVisualStyleBackColor = true;
-            // button5.Click += this.button5_Click;
+            btnManage.Location = new Point(487, 275);
+            btnManage.Name = "btnManage";
+            btnManage.Size = new Size(94, 29);
+            btnManage.TabIndex = 4;
+            btnManage.Text = "Manage";
+            btnManage.UseVisualStyleBackColor = true;
             // 
             // dgvStudents
             // 
@@ -106,7 +102,6 @@
             dgvStudents.RowHeadersWidth = 51;
             dgvStudents.Size = new Size(494, 188);
             dgvStudents.TabIndex = 5;
-            // dgvStudents.CellContentClick += this.dataGridView1_CellContentClick;
             // 
             // textBox1
             // 
@@ -185,11 +180,11 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(dgvStudents);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnManage);
+            Controls.Add(btnDelete);
+            Controls.Add(btnClear);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnAdd);
             Name = "Form1";
             ((System.ComponentModel.ISupportInitialize)dgvStudents).EndInit();
             ResumeLayout(false);
@@ -197,37 +192,15 @@
             // 
             // Form1
             // 
-            /* 
-             AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(912, 558);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(textBox1);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label1);
-            Controls.Add(dataGridView1);
-            Name = "Form1";
-            Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
-             */
         }
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
+        #endregion
+
+        private Button btnAdd;
+        private Button btnUpdate;
+        private Button btnClear;
+        private Button btnDelete;
+        private Button btnManage;
         private DataGridView dgvStudents;
         private TextBox textBox1;
         private TextBox textBox2;
@@ -237,23 +210,5 @@
         private Label txtLastName;
         private Label txtFirstName;
         private Label txtEmail;
-
-        #endregion
-
-        //private DataGridView dataGridView1;
-        //private Label label1;
-        //private Button button1;
-        //private Button button2;
-        //private Button button3;
-        //private Button button4;
-        //private Button button5;
-        //private TextBox textBox1;
-        //private Label label2;
-        //private Label label3;
-        //private Label label4;
-        //private TextBox textBox2;
-        //private TextBox textBox3;
-        //private TextBox textBox4;
-        // private Button button6;
     }
 }
