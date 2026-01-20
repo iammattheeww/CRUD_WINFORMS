@@ -165,7 +165,19 @@ namespace CRUD_FORMS
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            // DELETE FROM table_name WHERE condition;
+            using var conn = new MySqlConnection(connStr);
+            conn.Open();
 
+            string sql = @"DELETE FROM student WHERE Id=@id;";
+
+            using var cmd = new MySqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@id", txtId.Text);
+
+            cmd.ExecuteNonQuery();
+
+            LoadStudents();
+            ClearFields();
         }
 
         private void btnManage_Click(object sender, EventArgs e)
