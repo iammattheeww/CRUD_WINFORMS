@@ -9,17 +9,17 @@ using System.Windows.Forms;
 
 namespace CRUD_FORMS
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        private readonly string _connStr;
-        public Form2(string connStr)
+        private readonly string __connStr;
+        public Form3(string connStr)
         {
-            _connStr = connStr;
+            __connStr = connStr;
             InitializeComponent();
-            this.Load += Form2_Load;
+            this.Load += Form3_Load;
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
             LoadStudents();
         }
@@ -27,7 +27,7 @@ namespace CRUD_FORMS
 
         private void LoadStudents()
         {
-            using var conn = new MySqlConnection(_connStr);
+            using var conn = new MySqlConnection(__connStr);
             conn.Open();
 
             var da = new MySqlDataAdapter("SELECT Id, FirstName, LastName, Email FROM student", conn);
@@ -37,12 +37,6 @@ namespace CRUD_FORMS
 
             dgvStudents.AutoGenerateColumns = true;
             dgvStudents.DataSource = dt;
-        }
-
-        private void btnManage_Click(object sender, EventArgs e)
-        {
-            Form3 form3 = new Form3(_connStr);
-            form3.ShowDialog();
         }
     }
 }

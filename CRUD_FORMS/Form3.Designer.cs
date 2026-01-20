@@ -1,6 +1,6 @@
 ﻿namespace CRUD_FORMS
 {
-    partial class Form2
+    partial class Form3
     {
         /// <summary>
         /// Required designer variable.
@@ -28,46 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnManage = new Button();
             dgvStudents = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
             SuspendLayout();
             // 
-            // btnManage
-            // 
-            btnManage.Location = new Point(405, 179);
-            btnManage.Name = "btnManage";
-            btnManage.Size = new Size(94, 29);
-            btnManage.TabIndex = 0;
-            btnManage.Text = "Manage";
-            btnManage.UseVisualStyleBackColor = true;
-            btnManage.Click += btnManage_Click;
-            // 
             // dgvStudents
             // 
             dgvStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStudents.Location = new Point(60, 232);
+            dgvStudents.Location = new Point(47, 237);
             dgvStudents.Name = "dgvStudents";
             dgvStudents.RowHeadersWidth = 51;
-            dgvStudents.Size = new Size(439, 188);
-            dgvStudents.TabIndex = 1;
+            dgvStudents.Size = new Size(496, 188);
+            dgvStudents.TabIndex = 0;
             // 
-            // Form2
+            // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(dgvStudents);
-            Controls.Add(btnManage);
-            Name = "Form2";
-            Text = "Form2";
+            Name = "Form3";
+            Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)dgvStudents).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btnManage;
         private DataGridView dgvStudents;
     }
 }
