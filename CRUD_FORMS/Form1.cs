@@ -56,6 +56,63 @@ namespace CRUD_FORMS
         //    ClearFields();
         //}
 
+        //private void btnUpdate_Click(object sender, EventArgs e)
+        //{
+        //    using var conn = new MySqlConnection(connStr);
+        //    conn.Open();
+
+        //    string sql = @"UPDATE student SET FirstName=@fn, LastName=@ln, Email=@em WHERE Id=@id";
+
+        //    using var cmd = new MySqlCommand(sql, conn);
+        //    cmd.Parameters.AddWithValue("@id", txtId.Text);
+        //    cmd.Parameters.AddWithValue("@fn", txtFirstName.Text);
+        //    cmd.Parameters.AddWithValue("@ln", txtLastName.Text);
+        //    cmd.Parameters.AddWithValue("@em", txtEmail.Text);
+
+        //    cmd.ExecuteNonQuery();
+
+        //    LoadStudents();
+        //    ClearFields();
+        //}
+
+        //private void btnClear_Click(object sender, EventArgs e)
+        //{
+        //    ClearFields();
+        //}
+
+        //private void ClearFields()
+        //{
+        //    txtId.Clear();
+        //    txtFirstName.Clear();
+        //    txtLastName.Clear();
+        //    txtEmail.Clear();
+        //}
+
+        //private void btnOpenForm2_Click(object sender, EventArgs e)
+        //{
+        //    Form2 form2 = new Form2(connStr);
+        //    form2.ShowDialog();
+        //}
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
             using var conn = new MySqlConnection(connStr);
@@ -71,7 +128,7 @@ namespace CRUD_FORMS
             cmd.ExecuteNonQuery();
 
             LoadStudents();   // ✅ correct
-            ClearFields();
+            //ClearFields();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -100,21 +157,10 @@ namespace CRUD_FORMS
 
         private void ClearFields()
         {
-            //txtId.Clear();
-            //txtFirstName.Clear();
-            //txtLastName.Clear();
-            //txtEmail.Clear();
-        }
-
-        private void btnOpenForm2_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2(connStr);
-            form2.ShowDialog();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
         }
     }
 }
