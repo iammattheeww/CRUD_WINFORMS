@@ -121,14 +121,14 @@ namespace CRUD_FORMS
             string sql = @"INSERT INTO student (FirstName, LastName, Email) VALUES (@fn, @ln, @em)";
 
             using var cmd = new MySqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@fn", txtFirstName.Text);
-            cmd.Parameters.AddWithValue("@ln", txtLastName.Text);
-            cmd.Parameters.AddWithValue("@em", txtEmail.Text);
+            cmd.Parameters.AddWithValue("@fn", txtFirstName.Text.Trim());
+            cmd.Parameters.AddWithValue("@ln", txtLastName.Text.Trim());
+            cmd.Parameters.AddWithValue("@em", txtEmail.Text.Trim());
 
             cmd.ExecuteNonQuery();
 
             LoadStudents();   // ✅ correct
-            //ClearFields();
+            ClearFields();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -140,9 +140,9 @@ namespace CRUD_FORMS
 
             using var cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@id", txtId.Text);
-            cmd.Parameters.AddWithValue("@fn", txtFirstName.Text);
-            cmd.Parameters.AddWithValue("@ln", txtLastName.Text);
-            cmd.Parameters.AddWithValue("@em", txtEmail.Text);
+            cmd.Parameters.AddWithValue("@fn", txtFirstName.Text.Trim());
+            cmd.Parameters.AddWithValue("@ln", txtLastName.Text.Trim());
+            cmd.Parameters.AddWithValue("@em", txtEmail.Text.Trim());
 
             cmd.ExecuteNonQuery();
 
@@ -157,10 +157,21 @@ namespace CRUD_FORMS
 
         private void ClearFields()
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
+            txtId.Clear();
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtEmail.Clear();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnManage_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(connStr);
+            form2.ShowDialog();
         }
     }
 }

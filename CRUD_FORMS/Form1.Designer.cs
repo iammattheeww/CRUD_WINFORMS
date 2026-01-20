@@ -37,14 +37,14 @@
             btnDelete = new Button();
             btnManage = new Button();
             dgvStudents = new DataGridView();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            txtId = new Label();
-            txtLastName = new Label();
-            txtFirstName = new Label();
-            txtEmail = new Label();
+            txtId = new TextBox();
+            txtFirstName = new TextBox();
+            txtLastName = new TextBox();
+            txtEmail = new TextBox();
+            ID = new Label();
+            LastName = new Label();
+            FirstName = new Label();
+            Email = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
             SuspendLayout();
             // 
@@ -86,6 +86,7 @@
             btnDelete.TabIndex = 3;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnManage
             // 
@@ -95,6 +96,7 @@
             btnManage.TabIndex = 4;
             btnManage.Text = "Manage";
             btnManage.UseVisualStyleBackColor = true;
+            btnManage.Click += btnManage_Click;
             // 
             // dgvStudents
             // 
@@ -105,85 +107,85 @@
             dgvStudents.Size = new Size(494, 188);
             dgvStudents.TabIndex = 5;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(211, 47);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 6;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(211, 105);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 7;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(211, 161);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 8;
-            textBox3.TextChanged += textBox3_TextChanged;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(211, 217);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 9;
-            textBox4.TextChanged += textBox4_TextChanged;
-            // 
             // txtId
             // 
-            txtId.AutoSize = true;
-            txtId.Location = new Point(131, 50);
+            txtId.Location = new Point(211, 47);
             txtId.Name = "txtId";
-            txtId.Size = new Size(24, 20);
-            txtId.TabIndex = 10;
-            txtId.Text = "ID";
-            // 
-            // txtLastName
-            // 
-            txtLastName.AutoSize = true;
-            txtLastName.Location = new Point(104, 164);
-            txtLastName.Name = "txtLastName";
-            txtLastName.Size = new Size(79, 20);
-            txtLastName.TabIndex = 11;
-            txtLastName.Text = "Last Name";
+            txtId.Size = new Size(125, 27);
+            txtId.TabIndex = 6;
+            txtId.TextChanged += textBox1_TextChanged;
             // 
             // txtFirstName
             // 
-            txtFirstName.AutoSize = true;
-            txtFirstName.Location = new Point(103, 108);
+            txtFirstName.Location = new Point(211, 105);
             txtFirstName.Name = "txtFirstName";
-            txtFirstName.Size = new Size(80, 20);
-            txtFirstName.TabIndex = 12;
-            txtFirstName.Text = "First Name";
+            txtFirstName.Size = new Size(125, 27);
+            txtFirstName.TabIndex = 7;
+            txtFirstName.TextChanged += textBox2_TextChanged;
+            // 
+            // txtLastName
+            // 
+            txtLastName.Location = new Point(211, 161);
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(125, 27);
+            txtLastName.TabIndex = 8;
+            txtLastName.TextChanged += textBox3_TextChanged;
             // 
             // txtEmail
             // 
-            txtEmail.AutoSize = true;
-            txtEmail.Location = new Point(120, 220);
+            txtEmail.Location = new Point(211, 217);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(46, 20);
-            txtEmail.TabIndex = 13;
-            txtEmail.Text = "Email";
+            txtEmail.Size = new Size(125, 27);
+            txtEmail.TabIndex = 9;
+            txtEmail.TextChanged += textBox4_TextChanged;
+            // 
+            // ID
+            // 
+            ID.AutoSize = true;
+            ID.Location = new Point(131, 50);
+            ID.Name = "ID";
+            ID.Size = new Size(24, 20);
+            ID.TabIndex = 10;
+            ID.Text = "ID";
+            // 
+            // LastName
+            // 
+            LastName.AutoSize = true;
+            LastName.Location = new Point(104, 164);
+            LastName.Name = "LastName";
+            LastName.Size = new Size(79, 20);
+            LastName.TabIndex = 11;
+            LastName.Text = "Last Name";
+            // 
+            // FirstName
+            // 
+            FirstName.AutoSize = true;
+            FirstName.Location = new Point(103, 108);
+            FirstName.Name = "FirstName";
+            FirstName.Size = new Size(80, 20);
+            FirstName.TabIndex = 12;
+            FirstName.Text = "First Name";
+            // 
+            // Email
+            // 
+            Email.AutoSize = true;
+            Email.Location = new Point(120, 220);
+            Email.Name = "Email";
+            Email.Size = new Size(46, 20);
+            Email.TabIndex = 13;
+            Email.Text = "Email";
             // 
             // Form1
             // 
             ClientSize = new Size(1021, 531);
+            Controls.Add(Email);
+            Controls.Add(FirstName);
+            Controls.Add(LastName);
+            Controls.Add(ID);
             Controls.Add(txtEmail);
-            Controls.Add(txtFirstName);
             Controls.Add(txtLastName);
+            Controls.Add(txtFirstName);
             Controls.Add(txtId);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(dgvStudents);
             Controls.Add(btnManage);
             Controls.Add(btnDelete);
@@ -207,13 +209,13 @@
         private Button btnDelete;
         private Button btnManage;
         private DataGridView dgvStudents;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Label txtId;
-        private Label txtLastName;
-        private Label txtFirstName;
-        private Label txtEmail;
+        private TextBox txtId;
+        private TextBox txtFirstName;
+        private TextBox txtLastName;
+        private TextBox txtEmail;
+        private Label ID;
+        private Label LastName;
+        private Label FirstName;
+        private Label Email;
     }
 }
