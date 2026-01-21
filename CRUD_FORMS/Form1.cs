@@ -185,5 +185,11 @@ namespace CRUD_FORMS
             Form2 form2 = new Form2(connStr);
             form2.ShowDialog();
         }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            var form3 = new Form3();
+            form3.ShowDialog();
+        }
     }
 }

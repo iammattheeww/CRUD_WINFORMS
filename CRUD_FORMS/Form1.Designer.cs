@@ -45,6 +45,7 @@
             LastName = new Label();
             FirstName = new Label();
             Email = new Label();
+            btnNext = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
             SuspendLayout();
             // 
@@ -104,7 +105,7 @@
             dgvStudents.Location = new Point(87, 331);
             dgvStudents.Name = "dgvStudents";
             dgvStudents.RowHeadersWidth = 51;
-            dgvStudents.Size = new Size(494, 188);
+            dgvStudents.Size = new Size(594, 188);
             dgvStudents.TabIndex = 5;
             // 
             // txtId
@@ -175,9 +176,20 @@
             Email.TabIndex = 13;
             Email.Text = "Email";
             // 
+            // btnNext
+            // 
+            btnNext.Location = new Point(587, 275);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(94, 29);
+            btnNext.TabIndex = 14;
+            btnNext.Text = "Next";
+            btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
+            // 
             // Form1
             // 
             ClientSize = new Size(1021, 531);
+            Controls.Add(btnNext);
             Controls.Add(Email);
             Controls.Add(FirstName);
             Controls.Add(LastName);
@@ -217,5 +229,6 @@
         private Label LastName;
         private Label FirstName;
         private Label Email;
+        private Button btnNext;
     }
 }
