@@ -28,28 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnManage = new Button();
             dgvStudents = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
             SuspendLayout();
             // 
-            // btnManage
-            // 
-            btnManage.Location = new Point(405, 179);
-            btnManage.Name = "btnManage";
-            btnManage.Size = new Size(94, 29);
-            btnManage.TabIndex = 0;
-            btnManage.Text = "Manage";
-            btnManage.UseVisualStyleBackColor = true;
-            btnManage.Click += btnManage_Click;
-            // 
             // dgvStudents
             // 
             dgvStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStudents.Location = new Point(60, 232);
+            dgvStudents.Location = new Point(42, 43);
             dgvStudents.Name = "dgvStudents";
             dgvStudents.RowHeadersWidth = 51;
-            dgvStudents.Size = new Size(439, 188);
+            dgvStudents.Size = new Size(692, 377);
             dgvStudents.TabIndex = 1;
             // 
             // Form2
@@ -58,7 +47,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(dgvStudents);
-            Controls.Add(btnManage);
             Name = "Form2";
             Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)dgvStudents).EndInit();
@@ -66,8 +54,6 @@
         }
 
         #endregion
-
-        private Button btnManage;
         private DataGridView dgvStudents;
     }
 }

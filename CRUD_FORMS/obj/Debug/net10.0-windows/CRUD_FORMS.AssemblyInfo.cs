@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUD_FORMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2ca8350ba97d92b4c68677ca33bb48e41a2b8ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73d3fc81b017c095f59015ce920da3dc50659e2a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUD_FORMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUD_FORMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

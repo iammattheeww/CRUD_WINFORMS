@@ -38,11 +38,10 @@ namespace CRUD_FORMS
             dgvStudents.AutoGenerateColumns = true;
             dgvStudents.DataSource = dt;
         }
-
-        private void btnManage_Click(object sender, EventArgs e)
-        {
-            Form3 form3 = new Form3(_connStr);
-            form3.ShowDialog();
-        }
+        //private void btnManage_Click(object sender, EventArgs e)
+        //{
+        //    Form3 form3 = new Form3(_connStr);
+        //    form3.ShowDialog();
+        //}
     }
 }
