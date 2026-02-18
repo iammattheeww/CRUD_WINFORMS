@@ -8,11 +8,14 @@ using System.Windows.Forms;
 
 namespace CRUD_FORMS
 {
-    public partial class LoginForm : Form
+    public partial class maindash : Form
     {
-        public LoginForm()
+        private string loggedInUser; // Store the logged-in username
+
+        public maindash(string username)
         {
             InitializeComponent();
+            loggedInUser = username; 
         }
     }
 }

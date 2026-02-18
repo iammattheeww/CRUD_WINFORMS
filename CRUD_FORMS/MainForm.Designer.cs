@@ -1,6 +1,6 @@
 ﻿namespace CRUD_FORMS
 {
-    partial class Dash
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             menuStrip1 = new MenuStrip();
             registerToolStripMenuItem = new ToolStripMenuItem();
+            loginToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { registerToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { registerToolStripMenuItem, loginToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 28);
@@ -49,6 +50,13 @@
             registerToolStripMenuItem.Size = new Size(77, 24);
             registerToolStripMenuItem.Text = "Register";
             registerToolStripMenuItem.Click += registerToolStripMenuItem_Click;
+            // 
+            // loginToolStripMenuItem
+            // 
+            loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            loginToolStripMenuItem.Size = new Size(60, 24);
+            loginToolStripMenuItem.Text = "Login";
+            loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
             // 
             // Dash
             // 
@@ -69,5 +77,6 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem registerToolStripMenuItem;
+        private ToolStripMenuItem loginToolStripMenuItem;
     }
 }
