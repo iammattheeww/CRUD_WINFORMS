@@ -20,20 +20,20 @@ namespace CRUD_FORMS
 
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistrationForm register = new RegistrationForm();
+            RegisterForm register = new RegisterForm();
             register.ShowDialog();
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm(this);
+            FrmLogin loginForm = new FrmLogin(this);
 
-            // This "subscribes" the Dash to the Login window's success
+            // Subscribe to FrmLogin event
             loginForm.LoginSuccess += (username) =>
             {
-                this.LoginSucceeded?.Invoke(username); // Pass the message to Program.cs
+                // Raise Dash's event
+                LoginSucceeded?.Invoke(username);
             };
-
             loginForm.ShowDialog();
         }
     }

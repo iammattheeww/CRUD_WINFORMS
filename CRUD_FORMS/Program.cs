@@ -1,17 +1,41 @@
-namespace CRUD_FORMS
+using CRUD_FORMS;
+using System.Security.Policy;
+
+
+
+static class Program
 {
-    internal static class Program
+    [STAThread]
+    static void Main()
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm());
-        }
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+
+        AppContext appContext = new AppContext();
+        Application.Run(appContext);
     }
+
+}
+
+
+
+// Custom ApplicationContext
+public class AppContext : ApplicationContext
+{
+    public AppContext()
+    {
+        // Start with dash
+        MainForm dashForm = new MainForm();
+        dashForm.LoginSucceeded += OnLoginSucceeded; // raise this event from dash or FrmLogin
+        dashForm.FormClosed += (s, e) => ExitThread(); // fallback exit
+        dashForm.Show();
+    }
+
+    private void OnLoginSucceeded(string username)
+    {
+        maindash mainDash = new maindash(username);
+        mainDash.FormClosed += (s, e) => ExitThread(); // exit when dashboard closes
+        mainDash.Show();
+    }
+
 }

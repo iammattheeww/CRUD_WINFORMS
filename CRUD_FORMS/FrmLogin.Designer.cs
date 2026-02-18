@@ -30,8 +30,8 @@
         {
             label1 = new Label();
             label2 = new Label();
-            button1 = new Button();
-            button2 = new Button();
+            btnLogin = new Button();
+            btnCancel = new Button();
             txtUsername = new TextBox();
             txtPassword = new TextBox();
             SuspendLayout();
@@ -54,52 +54,52 @@
             label2.TabIndex = 1;
             label2.Text = "Password";
             // 
-            // button1
+            // btnLogin
             // 
-            button1.Location = new Point(232, 295);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 2;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnLogin.Location = new Point(232, 320);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(94, 29);
+            btnLogin.TabIndex = 2;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
-            // button2
+            // btnCancel
             // 
-            button2.Location = new Point(378, 295);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 3;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnCancel.Location = new Point(378, 320);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(94, 29);
+            btnCancel.TabIndex = 3;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(347, 97);
+            txtUsername.Location = new Point(361, 94);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(125, 27);
             txtUsername.TabIndex = 4;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(347, 176);
+            txtPassword.Location = new Point(361, 179);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(125, 27);
             txtPassword.TabIndex = 5;
             // 
-            // LoginForm
+            // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnCancel);
+            Controls.Add(btnLogin);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "LoginForm";
+            Name = "FrmLogin";
             Text = "Login Form";
             ResumeLayout(false);
             PerformLayout();
@@ -109,8 +109,8 @@
 
         private Label label1;
         private Label label2;
-        private Button button1;
-        private Button button2;
+        private Button btnLogin;
+        private Button btnCancel;
         private TextBox txtUsername;
         private TextBox txtPassword;
     }
